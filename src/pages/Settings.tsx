@@ -7,7 +7,6 @@ import { Switch } from "@/components/ui/switch";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Settings, User, Bell, Shield, Network, Palette, Database, Key, Globe, Smartphone } from "lucide-react";
 
 const Settings = () => {
@@ -156,16 +155,7 @@ const Settings = () => {
               <CardContent className="space-y-4">
                 <div className="space-y-2">
                   <Label>Default Network</Label>
-                  <Select defaultValue="sepolia">
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="sepolia">Sepolia Testnet</SelectItem>
-                      <SelectItem value="mainnet">Ethereum Mainnet</SelectItem>
-                      <SelectItem value="polygon">Polygon</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <Input placeholder="Sepolia Testnet" defaultValue="Sepolia Testnet" />
                 </div>
                 <div className="space-y-2">
                   <Label>RPC Endpoint</Label>
@@ -173,16 +163,7 @@ const Settings = () => {
                 </div>
                 <div className="space-y-2">
                   <Label>Gas Price</Label>
-                  <Select defaultValue="standard">
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="slow">Slow</SelectItem>
-                      <SelectItem value="standard">Standard</SelectItem>
-                      <SelectItem value="fast">Fast</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <Input placeholder="Standard" defaultValue="Standard" />
                 </div>
                 <Button variant="outline" className="w-full">
                   <Globe className="h-4 w-4 mr-2" />
@@ -205,30 +186,11 @@ const Settings = () => {
               <CardContent className="space-y-4">
                 <div className="space-y-2">
                   <Label>Theme</Label>
-                  <Select defaultValue="dark">
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="light">Light</SelectItem>
-                      <SelectItem value="dark">Dark</SelectItem>
-                      <SelectItem value="system">System</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <Input placeholder="Dark" defaultValue="Dark" />
                 </div>
                 <div className="space-y-2">
                   <Label>Language</Label>
-                  <Select defaultValue="en">
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="en">English</SelectItem>
-                      <SelectItem value="zh">中文</SelectItem>
-                      <SelectItem value="es">Español</SelectItem>
-                      <SelectItem value="fr">Français</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <Input placeholder="English" defaultValue="English" />
                 </div>
                 <div className="flex items-center justify-between">
                   <div>
