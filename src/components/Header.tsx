@@ -1,4 +1,4 @@
-import { Shield } from "lucide-react";
+import { Lock, BarChart3, Users, Settings } from "lucide-react";
 import { WalletConnect } from "./WalletConnect";
 import logo from "@/assets/logo.png";
 
@@ -10,23 +10,26 @@ const Header = () => {
           <img src={logo} alt="Cipher Pay Flow" className="h-10 w-10" />
           <div>
             <h1 className="text-xl font-bold text-foreground">Cipher Pay Flow</h1>
-            <p className="text-xs text-muted-foreground">Secure Payment System</p>
+            <p className="text-xs text-muted-foreground">Encrypted Payment Platform</p>
           </div>
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="/dashboard" className="text-muted-foreground hover:text-foreground transition-colors">
-            Dashboard
+          <a href="/dashboard" className="text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-1">
+            <BarChart3 className="h-4 w-4" />
+            <span>Dashboard</span>
           </a>
-          <a href="/payments" className="text-muted-foreground hover:text-foreground transition-colors">
-            Payments
+          <a href="/payments" className="text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-1">
+            <Lock className="h-4 w-4" />
+            <span>Payments</span>
           </a>
-          <a href="/team" className="text-muted-foreground hover:text-foreground transition-colors">
-            Team
+          <a href="/team" className="text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-1">
+            <Users className="h-4 w-4" />
+            <span>Team</span>
           </a>
           <a href="/security" className="text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-1">
-            <Shield className="h-4 w-4" />
-            <span>Security</span>
+            <Settings className="h-4 w-4" />
+            <span>Settings</span>
           </a>
         </nav>
 

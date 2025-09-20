@@ -1,11 +1,11 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { PaymentForm } from "@/components/PaymentForm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Send, Clock, CheckCircle, AlertCircle, Search } from "lucide-react";
+import { Clock, CheckCircle, AlertCircle, Search, Lock } from "lucide-react";
 
 const Payments = () => {
   return (
@@ -15,46 +15,22 @@ const Payments = () => {
         <div className="container mx-auto px-6 py-8">
           {/* Page Header */}
           <div className="mb-8">
-            <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-foreground via-accent to-success-glow bg-clip-text text-transparent">
-              Payment Management
+            <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-foreground via-accent to-success-glow bg-clip-text text-transparent flex items-center gap-2">
+              <Lock className="h-8 w-8" />
+              Encrypted Payments
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl">
-              Send secure, encrypted payments to your team members with full privacy protection.
+              Send secure, encrypted payments using FHE technology with complete privacy protection.
             </p>
           </div>
 
-          {/* Quick Send Payment */}
-          <Card className="glass-card mb-8">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Send className="h-5 w-5 text-success" />
-                Send New Payment
-              </CardTitle>
-              <CardDescription>
-                Create an encrypted payment to a team member
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                <div>
-                  <Label htmlFor="recipient">Recipient</Label>
-                  <Input id="recipient" placeholder="Select team member..." />
-                </div>
-                <div>
-                  <Label htmlFor="amount">Amount (ETH)</Label>
-                  <Input id="amount" type="number" placeholder="0.00" />
-                </div>
-                <div>
-                  <Label htmlFor="memo">Private Memo</Label>
-                  <Input id="memo" placeholder="Payment description..." />
-                </div>
-              </div>
-              <Button className="bg-gradient-success hover:bg-success-hover text-success-foreground">
-                <Send className="h-4 w-4 mr-2" />
-                Send Encrypted Payment
-              </Button>
-            </CardContent>
-          </Card>
+          {/* Encrypted Payment Form */}
+          <div className="mb-8">
+            <PaymentForm onPaymentCreated={(paymentId) => {
+              console.log('Payment created:', paymentId);
+              // Handle payment creation success
+            }} />
+          </div>
 
           {/* Payment History */}
           <div className="flex items-center justify-between mb-6">

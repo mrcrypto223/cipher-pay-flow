@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Switch } from "@/components/ui/switch";
 import { Progress } from "@/components/ui/progress";
-import { Shield, Lock, Key, AlertTriangle, CheckCircle, Eye, EyeOff, Fingerprint, Smartphone } from "lucide-react";
+import { Settings, Lock, Key, AlertTriangle, CheckCircle, Eye, EyeOff, Fingerprint, Smartphone } from "lucide-react";
 
 const Security = () => {
   return (
@@ -15,8 +15,9 @@ const Security = () => {
         <div className="container mx-auto px-6 py-8">
           {/* Page Header */}
           <div className="mb-8">
-            <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-foreground via-accent to-success-glow bg-clip-text text-transparent">
-              Security Center
+            <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-foreground via-accent to-success-glow bg-clip-text text-transparent flex items-center gap-2">
+              <Settings className="h-8 w-8" />
+              Security Settings
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl">
               Manage your DAO's security settings and encryption protocols for maximum privacy protection.
@@ -27,7 +28,7 @@ const Security = () => {
           <Card className="glass-card mb-8">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Shield className="h-5 w-5 text-success" />
+                <Lock className="h-5 w-5 text-success" />
                 Security Score
               </CardTitle>
               <CardDescription>
