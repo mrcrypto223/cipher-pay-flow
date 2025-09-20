@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import Payments from "./pages/Payments";
 import Team from "./pages/Team";
 import Security from "./pages/Security";
+import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
 const App = () => (
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/payments" element={<Payments />} />
           <Route path="/team" element={<Team />} />
           <Route path="/security" element={<Security />} />
+          <Route path="/settings" element={<Settings />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

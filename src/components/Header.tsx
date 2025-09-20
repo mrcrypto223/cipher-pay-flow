@@ -27,7 +27,7 @@ const Header = () => {
             <Users className="h-4 w-4" />
             <span>Team</span>
           </a>
-          <a href="/security" className="text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-1">
+          <a href="/settings" className="text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-1">
             <Settings className="h-4 w-4" />
             <span>Settings</span>
           </a>
