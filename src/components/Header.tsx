@@ -1,4 +1,5 @@
 import { Lock, BarChart3, Users, Settings } from "lucide-react";
+import { Link } from "react-router-dom";
 import { WalletConnect } from "./WalletConnect";
 import logo from "@/assets/logo.png";
 
@@ -15,22 +16,22 @@ const Header = () => {
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="/dashboard" className="text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-1">
+          <Link to="/dashboard" className="text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-1">
             <BarChart3 className="h-4 w-4" />
             <span>Dashboard</span>
-          </a>
-          <a href="/payments" className="text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-1">
+          </Link>
+          <Link to="/payments" className="text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-1">
             <Lock className="h-4 w-4" />
             <span>Payments</span>
-          </a>
-          <a href="/team" className="text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-1">
+          </Link>
+          <Link to="/team" className="text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-1">
             <Users className="h-4 w-4" />
             <span>Team</span>
-          </a>
-          <a href="/settings" className="text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-1">
+          </Link>
+          <Link to="/settings" className="text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-1">
             <Settings className="h-4 w-4" />
             <span>Settings</span>
-          </a>
+          </Link>
         </nav>
 
         <WalletConnect />
